@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Car Rental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+        
+        a:hover {
+            color: #ddd !important;
+        }
+        
+        .profile-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            margin-top: 30px;
+        }
+        
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .profile-info div {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .profile-info div:last-child {
+            margin-right: 0;
+        }
+        
+        .profile-info h5 {
+            font-weight: bold;
+        }
+        
+        .update-form input,
+        .update-form button {
+            margin: 10px 0;
+        }
+        
+        .rental-history {
+            padding-top: 30px;
+        }
+        
+        .rental-history table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .rental-history table th,
+        .rental-history table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        .rental-history table th {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Car Rental</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <!-- Profile Information -->
+            <div class="profile-info">
+                <div>
+                    <h5>User Information</h5>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Phone:</strong> +1234567890</p>
+                    <p><strong>Address:</strong> 123 Main St, City, Country</p>
+                </div>
+                <div>
+                    <h5>Account Settings</h5>
+                    <a href="#update" class="btn btn-warning">Update Profile</a>
+                    <a href="#password" class="btn btn-danger">Change Password</a>
+                </div>
+            </div>
+
+            <!-- Update Profile Form -->
+            <div id="update" class="update-form">
+                <h3>Update Profile Information</h3>
+                <form action="#" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="username" value="John Doe" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="useremail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="useremail" value="john.doe@example.com" name="useremail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userphone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="userphone" value="+1234567890" name="userphone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="useraddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="useraddress" value="123 Main St, City, Country" name="useraddress">
+                    </div>
+                    <button type="submit" class="btn btn-success">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Rental History -->
+            <div class="rental-history">
+                <h3>Rental History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Car Model</th>
+                            <th>Pickup Date</th>
+                            <th>Dropoff Date</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luxury Sedan</td>
+                            <td>2024-11-01 09:00 AM</td>
+                            <td>2024-11-05 09:00 AM</td>
+                            <td>$200</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Family SUV</td>
+                            <td>2024-11-10 10:00 AM</td>
+                            <td>2024-11-15 10:00 AM</td>
+                            <td>$250</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Convertible</td>
+                            <td>2024-11-18 11:00 AM</td>
+                            <td>2024-11-22 11:00 AM</td>
+                            <td>$300</td>
+                            <td>Upcoming</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

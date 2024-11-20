@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+            color: #fff;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: brightness(0.5);
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .navbar-brand,
+        .nav-link {
+            color: #fff !important;
+        }
+        
+        a:hover {
+            color: #ddd !important;
+        }
+        /* Hero Section */
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeUp 2s ease-in-out 0.5s forwards;
+        }
+        
+        .hero .btn {
+            animation: pulse 1.5s infinite;
+        }
+        /* Rent Section */
+        
+        .rent-form {
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out 1s forwards;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .rent-form input {
+            margin: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+        }
+        
+        .rent-form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+        }
+        /* Section Styling */
+        
+        .section {
+            padding: 50px 20px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        /* Keyframes */
+        
+        @keyframes fadeUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Car Rental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Drive Your Dreams</h1>
+            <a href="#models" class="btn btn-primary">Explore Cars</a>
+
+            <!-- Rent Form -->
+            <div class="rent-form animate__animated animate__fadeInUp">
+                <h3>Rent Your Car Now</h3>
+                <form>
+                    <div>
+                        <label for="pickupDate">Pickup Date & Time</label>
+                        <input type="datetime-local" id="pickupDate" name="pickupDate" required>
+                    </div>
+                    <div>
+                        <label for="dropoffDate">Dropoff Date & Time</label>
+                        <input type="datetime-local" id="dropoffDate" name="dropoffDate" required>
+                    </div>
+                    <div>
+                        <button type="submit">Rent Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best car rental experience. From luxury cars to family SUVs, we offer a wide range of vehicles to meet your needs. Experience premium service and unmatched comfort.</p>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="section">
+        <div class="container">
+            <h2>Our Models</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="suv.jpg" alt="SUV">
+                    <h3>SUVs</h3>
+                    <p>Perfect for family trips.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="sedan.jpg" alt="Sedan">
+                    <h3>Sedans</h3>
+                    <p>Sleek and comfortable.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="luxury.jpg" alt="Luxury">
+                    <h3>Luxury Cars</h3>
+                    <p>Ride in style and elegance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
